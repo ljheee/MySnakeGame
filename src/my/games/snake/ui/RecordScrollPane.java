@@ -10,8 +10,6 @@ import my.games.snake.model.SnakeGameRecords;
 
 public class RecordScrollPane{
 
-	private static final long serialVersionUID = -3552642981292000951L;
-
 	public JScrollPane getReadScrollPane(SnakeGameRecords records,
 			File recordFile) {
 		Object[][] data = new Object[records.getNumberInRecord()][3];

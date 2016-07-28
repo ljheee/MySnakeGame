@@ -44,7 +44,7 @@ public enum GameState {
 
 	/**
 	 * @param gameStateCode
-	 *            the gameStateCode to set
+	 * the gameStateCode to set
 	 */
 	public void setGameStateCode(String gameStateCode) {
 		this.gameStateCode = gameStateCode;
@@ -59,7 +59,7 @@ public enum GameState {
 
 	/**
 	 * @param gameStateValue
-	 *            the gameStateValue to set
+	 * the gameStateValue to set
 	 */
 	public void setGameStateValue(String gameStateValue) {
 		this.gameStateValue = gameStateValue;

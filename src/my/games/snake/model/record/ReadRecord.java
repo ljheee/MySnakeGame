@@ -28,7 +28,6 @@ public class ReadRecord {
 		try {
 			fileInput = new FileInputStream(recordFile);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

@@ -74,7 +74,7 @@ public class Snake implements Serializable {
 
 	/**
 	 * @param direction
-	 *            the direction to set
+	 * the direction to set
 	 */
 	public void setDirection(Direction direction) {
 		this.direction = direction;

@@ -2,7 +2,6 @@ package my.games.snake.enums;
 
 /**
  * @author Eric
- * 
  * @desc 游戏的结束类型的枚举类
  */
 public enum GameOverType {

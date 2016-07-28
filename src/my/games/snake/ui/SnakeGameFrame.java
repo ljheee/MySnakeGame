@@ -74,7 +74,7 @@ public class SnakeGameFrame extends JFrame {
 		JMenu setMenu = new JMenu("设置");
 		JMenu helpMenu = new JMenu("帮助");
 
-		setMenu.setMnemonic('s');
+		setMenu.setMnemonic('s');//设置当前模型上的键盘助记符,一个助记符必须对应键盘上的一个键，并且应该使用 java.awt.event.KeyEvent 中定义的 VK_XXX 键代码之一指定。助记符是不区分大小写的
 		setMenu.setMnemonic('H');
 
 		menuBar.add(setMenu);
@@ -220,18 +220,16 @@ public class SnakeGameFrame extends JFrame {
 	private class SaveAction implements ActionListener {
 		public void actionPerformed(ActionEvent event) {
 			if (panel.getGameState() == GameState.INITIALIZE) {
-				JOptionPane
-						.showConfirmDialog(SnakeGameFrame.this,
+				JOptionPane.showConfirmDialog(SnakeGameFrame.this,
 								"游戏没有运行\n不能保存游戏进度", "贪吃蛇游戏",
 								JOptionPane.DEFAULT_OPTION);
 				return;
 			}
 
-			FileDialog dialog = new FileDialog(SnakeGameFrame.this, "Save",
-					FileDialog.SAVE);
+			FileDialog dialog = new FileDialog(SnakeGameFrame.this, "Save",FileDialog.SAVE);
 			dialog.setVisible(true);
 			String dir = dialog.getDirectory();
-			String fileName = dialog.getFile();
+			String fileName = dialog.getFile();//获取到输入框中玩家输入的“要保存的文件名”
 			String filePath = dir + fileName;
 			if (fileName != null && fileName.trim().length() != 0) {
 				File file = new File(filePath);
@@ -248,7 +246,7 @@ public class SnakeGameFrame extends JFrame {
 
 		@SuppressWarnings("deprecation")
 		public void actionPerformed(ActionEvent event) {
-			File file = new File("file.dat");
+			File file = new File("file.dat");//记录分数的文件
 			SnakeGameRecords records = new ReadRecord()
 					.readRecordsFromFile(file);
 			records.sortRecords();
